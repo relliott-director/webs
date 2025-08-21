@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown to 31st January 2026 - Dublin Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f8fa;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, #7b68ee 0%, #ff63ea 100%);
+      color: #fff;
+      text-align: center;
+      padding: 24px 0 16px 0;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 2px 12px rgba(123,104,238,0.08);
+    }
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 32px 48px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    h1 {
+      color: #7b68ee;
+      margin-bottom: 8px;
+    }
+    .timer {
+      font-size: 2.2em;
+      margin: 24px 0;
+      color: #7b68ee;
+      letter-spacing: 2px;
+    }
+    .timezone {
+      font-size: 1.1em;
+      color: #888;
+      margin-bottom: 16px;
+    }
+    .footer {
+      margin-top: 32px;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    ClickUp End of Year COUNTDOWN!
+  </div>
+  <div class="container">
+    <h1>Countdown to 31st January 2026</h1>
+    <div class="timezone">Timezone: Dublin, Ireland (Europe/Dublin)</div>
+    <div class="timer" id="timer">Loading...</div>
+  </div>
+  <div class="footer">
+    &copy; 2025 Countdown Timer &mdash; Times anchored to Dublin, Ireland
+  </div>
+  <script>
+    // Target date: Midnight, 31st January 2026 in Dublin time
+    const targetDateStr = "2026-01-31T00:00:00";
+    const timeZone = "Europe/Dublin";
+
+    function getDublinNow() {
+      const now = new Date();
+      // Convert to Dublin time
+      const dublinNow = new Date(now.toLocaleString("en-US", { timeZone }));
+      return dublinNow;
+    }
+
+    function getTargetDate() {
+      // Parse as Dublin time
+      const target = new Date(targetDateStr + "Z");
+      // Adjust for Dublin timezone offset at that date
+      const dublinOffset = new Date(target.toLocaleString("en-US", { timeZone }));
+      return dublinOffset;
+    }
+
+    function getTimeParts(now, target) {
+      // Calculate total difference in seconds
+      let diff = Math.floor((target - now) / 1000);
+      if (diff < 0) diff = 0;
+
+      // Calculate months
+      let months = (target.getFullYear() - now.getFullYear()) * 12 + (target.getMonth() - now.getMonth());
+      let temp = new Date(now.getTime());
+      temp.setMonth(temp.getMonth() + months);
+
+      if (temp > target) {
+        months--;
+        temp.setMonth(temp.getMonth() - 1);
+      }
+
+      // Calculate weeks, days, hours, minutes, seconds
+      let remaining = (target - temp) / 1000;
+      let weeks = Math.floor(remaining / (7 * 24 * 60 * 60));
+      remaining -= weeks * 7 * 24 * 60 * 60;
+      let days = Math.floor(remaining / (24 * 60 * 60));
+      remaining -= days * 24 * 60 * 60;
+      let hours = Math.floor(remaining / (60 * 60));
+      remaining -= hours * 60 * 60;
+      let minutes = Math.floor(remaining / 60);
+      let seconds = Math.floor(remaining - minutes * 60);
+
+      return { months, weeks, days, hours, minutes, seconds };
+    }
+
+    function updateTimer() {
+      const now = getDublinNow();
+      const target = getTargetDate();
+
+      const { months, weeks, days, hours, minutes, seconds } = getTimeParts(now, target);
+
+      document.getElementById('timer').textContent =
+        `${months} month${months !== 1 ? 's' : ''}, ` +
+        `${weeks} week${weeks !== 1 ? 's' : ''}, ` +
+        `${days} day${days !== 1 ? 's' : ''}, ` +
+        `${hours.toString().padStart(2, '0')}:` +
+        `${minutes.toString().padStart(2, '0')}:` +
+        `${seconds.toString().padStart(2, '0')}`;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
