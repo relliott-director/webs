@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;ClickUp Timer - Dublin Time&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #f7f8fa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #222;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 24px rgba(0,0,0,0.08);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 32px 48px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #7b68ee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.timer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 3em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 24px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #7b68ee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.timezone {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #888;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #7b68ee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 12px 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 1.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: background 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #5a4fcf;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #aaa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 0.9em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;ClickUp Timer&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="timezone"&gt;Timezone: Dublin, Ireland (Europe/Dublin)&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="timer" id="timer"&gt;00:00:00&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button onclick="startTimer()"&gt;Start&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button onclick="pauseTimer()"&gt;Pause&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button onclick="resetTimer()"&gt;Reset&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="footer"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&amp;copy; 2025 ClickUp Timer &amp;mdash; Times anchored to Dublin, Ireland</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let timerInterval;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let elapsed = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let running = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let lastStart = null;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function updateTimerDisplay() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let total = elapsed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (running &amp;&amp; lastStart) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Get current time in Dublin</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const now = new Date();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const nowDublin = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Dublin" }));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>total += Math.floor((nowDublin - lastStart) / 1000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const hours = String(Math.floor(total / 3600)).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const minutes = String(Math.floor((total % 3600) / 60)).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const seconds = String(total % 60).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function startTimer() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!running) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>running = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Use Dublin time for start</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const now = new Date();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lastStart = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Dublin" }));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>timerInterval = setInterval(updateTimerDisplay, 1000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function pauseTimer() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (running) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>running = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Use Dublin time for pause</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const now = new Date();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const nowDublin = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Dublin" }));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>elapsed += Math.floor((nowDublin - lastStart) / 1000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>clearInterval(timerInterval);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>updateTimerDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function resetTimer() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>running = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>elapsed = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>lastStart = null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>clearInterval(timerInterval);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>updateTimerDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Initialize display</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>updateTimerDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
